@@ -1,13 +1,9 @@
 const mongoose = require('mongoose');
 
-
 const exchangeRateSchema = new mongoose.Schema({
   baseCurrency: String,
   date: Date,
-  rates: Object, 
+  rates: Object,
 });
 
-
-const ExchangeRate = mongoose.model('ExchangeRate', exchangeRateSchema);
-
-module.exports = ExchangeRate;
+module.exports = mongoose.model('ExchangeRate', exchangeRateSchema);

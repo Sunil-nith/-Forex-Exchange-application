@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "e9dab5e3-6148-4e2a-a32b-6c5f8d9434ce",
+		"name": "moneyExchange",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28159028"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/users/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" :\"bad@gmail.com\",\r\n    \"password\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" :\"bad@gmail.com\",\r\n    \"password\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/money/convert",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhZEBnbWFpbC5jb20iLCJpZCI6IjY1MzZiYWQ1NTBjM2RjZTkzMTAwY2FjYyIsImlhdCI6MTY5ODEwMTc0NywiZXhwIjoxNjk4MTE5NzQ3fQ.rwpA1oJE_fLdkl9lNQ6qUwe91I43DXMbQ00Bq-qoSXU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sourceCurrency\":\"USD\",\r\n     \"targetCurrency\":\"INR\",\r\n      \"amount\":\"100\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/money/convert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"money",
+						"convert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/money/rates",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJAZ21haWwuY29tIiwiaWQiOiI2NTM2OTExZDNiMmI0NTdmYjAwOTI5MTQiLCJpYXQiOjE2OTgwNzU2MzUsImV4cCI6MTY5ODA5MzYzNX0.ol3hOdgRk1aS7SYR4eUXP0pIyF9kd5f6DAPmT6Pl3v0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/money/rates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"money",
+						"rates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/money/history",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhZEBnbWFpbC5jb20iLCJpZCI6IjY1MzZiYWQ1NTBjM2RjZTkzMTAwY2FjYyIsImlhdCI6MTY5ODA5ODIxMiwiZXhwIjoxNjk4MTE2MjEyfQ.HVOKGLgBk_qvp6g-b9pWovonCK_-bJBPCdLzDMNh_Cs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sourceCurrency\":\"USD\",\r\n     \"targetCurrency\":\"INR\"\r\n     \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/money/history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"money",
+						"history"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
